@@ -315,6 +315,39 @@
             margin-bottom: 1rem;
             display: none;
         }
+		
+		.service-text {
+    max-height: 60px;  /* 2–3 lines ke liye approx height */
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+
+.service-text.expanded {
+    max-height: 500px; /* expand hone par full text */
+}
+
+.read-more-btn {
+    margin-top: 1rem;
+    background: #1a237e;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    display: none; /* default hidden */
+}
+
+.read-more-btn:hover {
+    background: #303f9f;
+}
+
+		
+		
+		
+		
+		
+		
     </style>
 </head>
 <body>
@@ -348,14 +381,22 @@
             <h2 class="section-title">Our Legal Services</h2>
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="service-icon">🏛️</div>
-                    <h3>Civil Litigation</h3>
-                    <p>Property disputes, contract matters, and comprehensive civil litigation services</p>
-                </div>
+               <div class="service-icon">🏛️</div>
+               <h3>Civil Litigation</h3>
+              <p class="service-text">
+        Property disputes, contract matters, and comprehensive civil litigation services.
+        We handle cases in High Courts and Supreme Court with a proven track record of success.
+        Our team ensures transparency, timely updates, and professional representation in every matter.
+              </p>
+    <button class="read-more-btn">Read More</button>
+</div>
                 <div class="service-card">
                     <div class="service-icon">⚖️</div>
                     <h3>Criminal Defense</h3>
-                    <p>Strong defense representation in criminal matters and legal proceedings</p>
+                    <p class="service-text">Property disputes, contract matters, and comprehensive civil litigation services.
+        We handle cases in High Courts and Supreme Court with a proven track record of success.
+        Our team ensures transparency, timely updates, and professional representation in every matter.</p>
+		<button class="read-more-btn">Read More</button>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">👥</div>
@@ -420,8 +461,8 @@
                         <div class="contact-icon">📍</div>
                         <div>
                             <strong>Address:</strong><br>
-                            123, Law Chambers, Supreme Court Road<br>
-                            New Delhi - 110001, India
+                            Shastri Nagar<br>
+                            Ghaziabad 201002, India
                         </div>
                     </div>
                     <div class="contact-item">
@@ -436,8 +477,8 @@
                         <div class="contact-icon">📧</div>
                         <div>
                             <strong>Email:</strong><br>
-                            info@sharmaassociates.com<br>
-                            consultation@sharmaassociates.com
+                            info@gautam.com<br>
+                            gautam@gautamassociates.com
                         </div>
                     </div>
                     <div class="contact-item">
@@ -661,6 +702,28 @@
         window.addEventListener('load', () => {
             setTimeout(typeWriter, 1000);
         });
+		
+		
+		document.querySelectorAll('.service-card').forEach(card => {
+    const text = card.querySelector('.service-text');
+    const button = card.querySelector('.read-more-btn');
+
+    // Check if text overflows
+    if (text.scrollHeight > text.clientHeight) {
+        button.style.display = 'inline-block'; // show button
+    }
+
+    // Toggle expand/collapse
+    button.addEventListener('click', () => {
+        text.classList.toggle('expanded');
+        if (text.classList.contains('expanded')) {
+            button.textContent = "Read Less";
+        } else {
+            button.textContent = "Read More";
+        }
+    });
+});
+
     </script>
 </body>
 </html>
