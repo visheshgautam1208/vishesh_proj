@@ -342,6 +342,37 @@
     background: #303f9f;
 }
 
+/* Hide hamburger in desktop */
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: white;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: 70px; /* header ke niche */
+        left: 0;
+        width: 100%;
+        background: #1a237e;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem 0;
+        text-align: center;
+        display: none; /* default hidden */
+    }
+
+    .nav-menu.active {
+        display: flex; /* show when active */
+    }
+}
 		
 		
 		
@@ -352,19 +383,24 @@
 </head>
 <body>
     <!-- Header -->
-    <header class="header">
-        <div class="nav-container">
-            <div class="logo">⚖️ Adv Vijay Gautam & Associates</div>
-            <nav>
-                <ul class="nav-menu">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+<header class="header">
+    <div class="nav-container">
+        <div class="logo">⚖️ Adv Vijay Gautam & Associates</div>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Mobile Hamburger -->
+        <div class="hamburger">
+            ☰
         </div>
-    </header>
+    </div>
+</header>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
@@ -708,21 +744,26 @@
     const text = card.querySelector('.service-text');
     const button = card.querySelector('.read-more-btn');
 
-    // Check if text overflows
-    if (text.scrollHeight > text.clientHeight) {
-        button.style.display = 'inline-block'; // show button
-    }
-
-    // Toggle expand/collapse
-    button.addEventListener('click', () => {
-        text.classList.toggle('expanded');
-        if (text.classList.contains('expanded')) {
-            button.textContent = "Read Less";
-        } else {
-            button.textContent = "Read More";
+    if (text && button) {   // ✅ null check
+        // Check if text overflows
+        if (text.scrollHeight > text.clientHeight) {
+            button.style.display = 'inline-block'; // show button
         }
-    });
+
+        // Toggle expand/collapse
+        button.addEventListener('click', () => {
+            text.classList.toggle('expanded');
+            button.textContent = text.classList.contains('expanded') ? "Read Less" : "Read More";
+        });
+    }
 });
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('.nav-menu');
+
+hamburger.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+});
+
 
     </script>
 </body>
