@@ -437,7 +437,10 @@
                 <div class="service-card">
                     <div class="service-icon">👥</div>
                     <h3>Family Law</h3>
-                    <p>Divorce, alimony, child custody, and all family-related legal matters</p>
+                    <p class="service-text">Property disputes, contract matters, and comprehensive civil litigation services.
+        We handle cases in High Courts and Supreme Court with a proven track record of success.
+        Our team ensures transparency, timely updates, and professional representation in every matter.</p>
+		<button class="read-more-btn">Read More</button>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">🏢</div>
@@ -534,77 +537,77 @@
                 </div>
 
                 <div class="contact-form">
-                    <h3 style="margin-bottom: 2rem; color: #1a237e;">Free Legal Consultation Inquiry</h3>
-                    
-                    <div id="successMessage" class="success-message">
-                        Your message has been sent successfully. We will contact you shortly.
-                    </div>
+    <h3 style="margin-bottom: 2rem; color: #1a237e;">Free Legal Consultation Inquiry</h3>
+    
+    <div id="successMessage" class="success-message" style="display:none; color: green; margin-bottom: 1rem;">
+        ✅ Your message has been sent successfully. We will contact you shortly.
+    </div>
 
-                    <form id="inquiryForm">
-                        <div class="form-group">
-                            <label for="name">Full Name *</label>
-                            <input type="text" id="name" name="name" required placeholder="Enter your full name">
-                        </div>
+    <form id="inquiryForm">
+        <div class="form-group">
+            <label for="name">Full Name *</label>
+            <input type="text" id="name" name="name" required placeholder="Enter your full name" value="">
+        </div>
 
-                        <div class="form-group">
-                            <label for="phone">Phone Number *</label>
-                            <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
-                        </div>
+        <div class="form-group">
+            <label for="phone">Phone Number *</label>
+            <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number" value="">
+        </div>
 
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" placeholder="Enter your email (optional)">
-                        </div>
+        <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email (optional)" value="">
+        </div>
 
-                        <div class="form-group">
-                            <label for="caseType">Type of Legal Matter *</label>
-                            <select id="caseType" name="caseType" required>
-                                <option value="">Select Case Type</option>
-                                <option value="civil">Civil Litigation</option>
-                                <option value="criminal">Criminal Defense</option>
-                                <option value="family">Family Law</option>
-                                <option value="corporate">Corporate Law</option>
-                                <option value="property">Property/Real Estate</option>
-                                <option value="divorce">Divorce</option>
-                                <option value="immigration">Immigration Law</option>
-                                <option value="personal-injury">Personal Injury</option>
-                                <option value="employment">Employment Law</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
+        <div class="form-group">
+            <label for="caseType">Type of Legal Matter *</label>
+            <select id="caseType" name="caseType" required>
+                <option value="">Select Case Type</option>
+                <option value="civil">Civil Litigation</option>
+                <option value="criminal">Criminal Defense</option>
+                <option value="family">Family Law</option>
+                <option value="corporate">Corporate Law</option>
+                <option value="property">Property/Real Estate</option>
+                <option value="divorce">Divorce</option>
+                <option value="immigration">Immigration Law</option>
+                <option value="personal-injury">Personal Injury</option>
+                <option value="employment">Employment Law</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
 
-                        <div class="form-group">
-                            <label for="city">City</label>
-                            <input type="text" id="city" name="city" placeholder="Your city">
-                        </div>
+        <div class="form-group">
+            <label for="city">City</label>
+            <input type="text" id="city" name="city" placeholder="Your city" value="">
+        </div>
 
-                        <div class="form-group">
-                            <label for="message">Case Details *</label>
-                            <textarea id="message" name="message" rows="5" required placeholder="Please describe your legal matter in detail..."></textarea>
-                        </div>
+        <div class="form-group">
+            <label for="message">Case Details *</label>
+            <textarea id="message" name="message" rows="5" required placeholder="Please describe your legal matter in detail..." value=""></textarea>
+        </div>
 
-                        <div class="form-group">
-                            <label for="urgency">Priority Level</label>
-                            <select id="urgency" name="urgency">
-                                <option value="normal">Normal</option>
-                                <option value="urgent">Urgent</option>
-                                <option value="emergency">Emergency</option>
-                            </select>
-                        </div>
+        <div class="form-group">
+            <label for="urgency">Priority Level</label>
+            <select id="urgency" name="urgency">
+                <option value="normal">Normal</option>
+                <option value="urgent">Urgent</option>
+                <option value="emergency">Emergency</option>
+            </select>
+        </div>
 
-                        <div class="form-group">
-                            <label for="preferredContact">Preferred Contact Method</label>
-                            <select id="preferredContact" name="preferredContact">
-                                <option value="phone">Phone Call</option>
-                                <option value="email">Email</option>
-                                <option value="whatsapp">WhatsApp</option>
-                                <option value="office">Office Visit</option>
-                            </select>
-                        </div>
+        <div class="form-group">
+            <label for="preferredContact">Preferred Contact Method</label>
+            <select id="preferredContact" name="preferredContact">
+                <option value="phone">Phone Call</option>
+                <option value="email">Email</option>
+                <option value="whatsapp">WhatsApp</option>
+                <option value="office">Office Visit</option>
+            </select>
+        </div>
 
-                        <button type="submit" class="submit-btn">Send Inquiry 📤</button>
-                    </form>
-                </div>
+        <button type="submit" class="submit-btn">Send Inquiry 📤</button>
+    </form>
+</div>
             </div>
         </div>
     </section>
@@ -631,59 +634,6 @@
             });
         });
 
-        // Form submission handling
-        document.getElementById('inquiryForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(this);
-            const data = {};
-            
-            for (let [key, value] of formData.entries()) {
-                data[key] = value;
-            }
-            
-            // Validate required fields
-            const requiredFields = ['name', 'phone', 'caseType', 'message'];
-            const missingFields = requiredFields.filter(field => !data[field]);
-            
-            if (missingFields.length > 0) {
-                alert('Please fill all required fields: ' + missingFields.join(', '));
-                return;
-            }
-            
-            // Phone number validation (Indian format)
-            const phonePattern = /^[6-9]\d{9}$/;
-            const cleanPhone = data.phone.replace(/\D/g, '');
-            if (cleanPhone.length < 10 || !phonePattern.test(cleanPhone.slice(-10))) {
-                alert('Please enter a valid phone number');
-                return;
-            }
-            
-            // Email validation (if provided)
-            if (data.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) {
-                alert('Please enter a valid email address');
-                return;
-            }
-            
-            // Show success message
-            const successMessage = document.getElementById('successMessage');
-            successMessage.style.display = 'block';
-            
-            // Reset form
-            this.reset();
-            
-            // Hide success message after 5 seconds
-            setTimeout(() => {
-                successMessage.style.display = 'none';
-            }, 5000);
-            
-            // Scroll to success message
-            successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            
-            // In a real application, you would send this data to your server
-            console.log('Form submitted with data:', data);
-        });
 
         // Header background change on scroll
         window.addEventListener('scroll', function() {
@@ -763,6 +713,87 @@ hamburger.addEventListener('click', () => {
 });
 
 
-    </script>
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>	
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+<script>
+  (function(){
+      emailjs.init("YJtOWCsm5YVOogWIY"); // 👈 Replace with your Public Key
+  })();
+
+  document.getElementById("inquiryForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+	  
+	  
+	  
+	  const formData = new FormData(this);
+            const data = {};
+            
+            for (let [key, value] of formData.entries()) {
+                data[key] = value;
+            }
+            
+            // Validate required fields
+            const requiredFields = ['name', 'phone', 'caseType', 'message'];
+            const missingFields = requiredFields.filter(field => !data[field]);
+            
+            if (missingFields.length > 0) {
+                alert('Please fill all required fields: ' + missingFields.join(', '));
+                return;
+            }
+            
+            // Phone number validation (Indian format)
+            const phonePattern = /^[6-9]\d{9}$/;
+            const cleanPhone = data.phone.replace(/\D/g, '');
+            if (cleanPhone.length < 10 || !phonePattern.test(cleanPhone.slice(-10))) {
+                alert('Please enter a valid phone number');
+                return;
+            }
+            
+            // Email validation (if provided)
+            if (data.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) {
+                alert('Please enter a valid email address');
+                return;
+            }
+            
+            // Show success message
+            const successMessage = document.getElementById('successMessage');
+            successMessage.style.display = 'block';
+            
+            // Reset form
+            this.reset();
+            
+            // Hide success message after 5 seconds
+            setTimeout(() => {
+                successMessage.style.display = 'none';
+            }, 5000);
+            
+            // Scroll to success message
+            successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            
+            // In a real application, you would send this data to your server
+            console.log('Form submitted with data:', data);
+	    
+	formData.append('service_id', 'service_6g2ddoa');
+    formData.append('template_id', 'template_qv6gkcn');
+    formData.append('user_id', 'YJtOWCsm5YVOogWIY');
+ 
+    $.ajax('https://api.emailjs.com/api/v1.0/email/send-form', {
+        type: 'POST',
+        data: formData,
+        contentType: false,
+        processData: false 
+    }).done(function() {
+        document.getElementById("successMessage").style.display = "block";
+        document.getElementById("inquiryForm").reset();
+    }).fail(function(error) {
+		alert("❌ Failed to send message. Please try again later.");
+        console.error(error);
+    });
+	  
+  });
+</script>
+
+
 </body>
 </html>
